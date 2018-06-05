@@ -2,7 +2,7 @@
 
 This is the classroom control repository for the Virtual Fundamentals class.
 
-## Usage
+## Teste Wendy
 
 Small site modules should be developed in the `site` directory. This is appended
 to the `$modulepath` by the `environment.conf` file so that Puppet can use modules
