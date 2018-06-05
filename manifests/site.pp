@@ -50,7 +50,7 @@ exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
        create => '/etc/motd',
      }
 
-#file { '/etc/motd':
+# file { '/etc/motd':
 #  ensure  => file,
 #  owner   => 'root',
  # group   => 'root',
