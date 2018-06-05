@@ -52,3 +52,7 @@ file { '/etc/motd':
   mode    => '0644',
   content => "Think before you type\n",
 }
+
+exec { '/etc/motd':
+        "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+     }
