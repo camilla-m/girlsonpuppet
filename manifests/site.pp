@@ -53,8 +53,7 @@ file { '/etc/motd':
   content => "Think before you type\n",
 }
 
-exec { '/etc/motd': 
-        "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
        path =>  '/usr/local/bin/cowsay',   
        create => '/etc/motd',
      }
