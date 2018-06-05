@@ -45,6 +45,11 @@ node default {
   include role::classroom
 
 
+exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+       path =>  '/usr/local/bin',   
+       create => '/etc/motd',
+     }
+
 file { '/etc/motd':
   ensure  => file,
   owner   => 'root',
@@ -53,9 +58,6 @@ file { '/etc/motd':
   content => "Think before you type\n",
 }
 
-exec { "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-       path =>  '/usr/local/bin',   
-       create => '/etc/motd',
-     }
+
 }     
      
