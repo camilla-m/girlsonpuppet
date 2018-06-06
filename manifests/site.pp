@@ -45,7 +45,7 @@ node default {
   include role::classroom  
   include skeleton
 
-  if $facts['is_vitual'] == true {
+  if $facts['is_vitual'] == 'true' {
     notice("This is a virtual machine!")
   }
   
