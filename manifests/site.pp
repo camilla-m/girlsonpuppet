@@ -47,7 +47,7 @@ node default {
 
   if $facts['is_vitual'] == true {
     # notice("This is a virtual machine!\n")
-    notify {'This is a virtual machine!\n'}
+    notify { "This is a virtual machine!\n": }
     
   }
   
